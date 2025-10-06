@@ -167,6 +167,12 @@
         fragment: 'else:'
         count: 3
         exact: false
+    - description: Complete all TODOs (no TODO comments remaining in main.py)
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: false
 
 - writing/reflection.md:
     - description: Check reflection exists
