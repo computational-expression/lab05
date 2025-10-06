@@ -129,7 +129,7 @@ def main():
                 time.sleep(0.2)  # Prevent button bounce
                 print("Button pressed - command confirmed!")
 
-            # TODO: Add device to the list and print confirmation message
+                # TODO: Add device to the list and print confirmation message
 
         # TODO 9: Turn OFF device (choice == "2") - USE remove() method  
         # Print "Active devices to turn OFF:"
@@ -156,15 +156,14 @@ def main():
             print("Invalid action!")
 
 
-    # TODO 11: Status update display (use this after each operation)
-    # Print updated status showing current active devices:
-    # - Print f"Updated Status ({len(active_devices)} devices active):"
-    # - If len(active_devices) == 0: print "  No devices currently active"
-    # - Else: loop through active_devices and print each device name
-    # - time.sleep(1) for brief pause
+        # TODO 11: Status update display (use this after each operation)
+        # Print updated status showing current active devices:
+        # - Print f"Updated Status ({len(active_devices)} devices active):"
+        # - If len(active_devices) == 0: print "  No devices currently active"
+        # - Else: loop through active_devices and print each device name
+        # - time.sleep(1) for brief pause
 
-    # Your status update code here (put this at end of main loop):
-
+    
 # Main guard is provided for you:
 if __name__ == "__main__":
     main()

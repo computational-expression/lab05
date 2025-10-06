@@ -141,6 +141,9 @@ time.sleep(0.2)  # Prevent button bounce
 print("Button pressed - command confirmed!")
 ```
 
+`button.value() == 1`: Button NOT pushed
+`button.value() == 0`: Button IS pushed
+
 ## Required Features for Complete Implementation
 
 Your program must demonstrate **IoT device management**:
