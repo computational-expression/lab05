@@ -1,0 +1,177 @@
+- description: Have at least a minimum number (at least 8) of commits in repository
+  check: CountCommits
+  options:
+    count: 2
+- src/main.py:
+    - description: Check file exists
+      check: ConfirmFileExists
+    - description: Import machine module
+      check: MatchFileFragment
+      options:
+        fragment: from machine import Pin
+        count: 1
+        exact: false
+    - description: Import time module
+      check: MatchFileFragment
+      options:
+        fragment: import time
+        count: 1
+        exact: false
+    - description: Import sys module
+      check: MatchFileFragment
+      options:
+        fragment: import sys
+        count: 1
+        exact: false
+    - description: Create active_devices list (at least 3 uses)
+      check: MatchFileFragment
+      options:
+        fragment: active_devices
+        count: 3
+        exact: false
+    - description: Create available_devices list (at least 3 uses)
+      check: MatchFileFragment
+      options:
+        fragment: available_devices
+        count: 3
+        exact: false
+    - description: Use append method for device control (at least 1 time)
+      check: MatchFileFragment
+      options:
+        fragment: .append(
+        count: 1
+        exact: false
+    - description: Use remove method for device control (at least 1 time)
+      check: MatchFileFragment
+      options:
+        fragment: .remove(
+        count: 1
+        exact: false
+    - description: Create LED pin objects with Pin.OUT (at least 3 times)
+      check: MatchFileFragment
+      options:
+        fragment: Pin.OUT
+        count: 3
+        exact: false
+    - description: Create button pin object with Pin.IN (at least 1 time)
+      check: MatchFileFragment
+      options:
+        fragment: Pin.IN
+        count: 1
+        exact: false
+    - description: Use LED on method .on() (at least 6 times)
+      check: MatchFileFragment
+      options:
+        fragment: .on()
+        count: 6
+        exact: false
+    - description: Use LED off method .off() (at least 8 times)
+      check: MatchFileFragment
+      options:
+        fragment: .off()
+        count: 8
+        exact: false
+    - description: Use button value method .value() (at least 4 times)
+      check: MatchFileFragment
+      options:
+        fragment: .value()
+        count: 4
+        exact: false
+    - description: Use button pull-up resistor Pin.PULL_UP (at least 1 time)
+      check: MatchFileFragment
+      options:
+        fragment: Pin.PULL_UP
+        count: 1
+        exact: false
+    - description: Use sleep calls for timing time.sleep( (at least 8 times)
+      check: MatchFileFragment
+      options:
+        fragment: time.sleep(
+        count: 8
+        exact: false
+    - description: Use print statements for IoT interface print( (at least 20 times)
+      check: MatchFileFragment
+      options:
+        fragment: print(
+        count: 20
+        exact: false
+    - description: Use input for user interaction input( (at least 3 times)
+      check: MatchFileFragment
+      options:
+        fragment: input(
+        count: 3
+        exact: false
+    - description: Use for loop iteration for device lists (at least 6 times)
+      check: MatchFileFragment
+      options:
+        fragment: 'for '
+        count: 6
+        exact: false
+    - description: Use range with len for list iteration range(len( (at least 3 times)
+      check: MatchFileFragment
+      options:
+        fragment: range(len(
+        count: 3
+        exact: false
+    - description: Use if statements for IoT logic (at least 10 times)
+      check: MatchFileFragment
+      options:
+        fragment: 'if '
+        count: 10
+        exact: false
+    - description: Use while loops for main control and button input (at least 3 times)
+      check: MatchFileFragment
+      options:
+        fragment: 'while '
+        count: 3
+        exact: false
+    - description: Use list membership checking with 'in' operator (at least 3 times)
+      check: MatchFileFragment
+      options:
+        fragment: ' in '
+        count: 3
+        exact: false
+    - description: Use len() function for list operations (at least 5 times)
+      check: MatchFileFragment
+      options:
+        fragment: len(
+        count: 5
+        exact: false
+    - description: Use sys.exit() for program termination (at least 1 time)
+      check: MatchFileFragment
+      options:
+        fragment: sys.exit()
+        count: 1
+        exact: false
+    - description: Use device status checking with string contains (at least 3 times)
+      check: MatchFileFragment
+      options:
+        fragment: '"'
+        count: 15
+        exact: false
+    - description: Create main control loop with operation counter (at least 1 time)
+      check: MatchFileFragment
+      options:
+        fragment: operation_count
+        count: 1
+        exact: false
+    - description: Use choice input validation (at least 1 time)
+      check: MatchFileFragment
+      options:
+        fragment: choice
+        count: 3
+        exact: false
+
+- writing/reflection.md:
+    - description: Check reflection exists
+      check: ConfirmFileExists
+    - description: Write sufficient words (at least 300 words)
+      check: CountFileWords
+      options:
+        count: 300
+    - description: Use markdown lists using - (at least 10 list items total)
+      check: MatchFileFragment
+      options:
+        fragment: '- '
+        count: 10
+        exact: false
