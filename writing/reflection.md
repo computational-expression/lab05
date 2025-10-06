@@ -1,19 +1,13 @@
 ---
 # Lab 5 Reflection
 
-## Summary
-
-Write a brief summary of what you accomplished in this lab assignment focusing on IoT device management and list modification.
-
-*Use markdown lists (using -) to organize your thoughts throughout this reflection.*
-
 ## IoT Device Management
 
 Describe how you created your smart home monitoring system. Use markdown lists to structure your responses:
 
 - **Device lists:** What two main lists did you create to manage IoT devices?
 - **List modification:** How did you use `append()` and `remove()` methods for device control?
-- **Device categorization:** How did you organize devices by type (security, HVAC, lighting)?
+- **Device categorization:** How did you organize devices by type (e.g., security, HVAC, lighting)?
 
 ## Hardware Integration
 
@@ -72,12 +66,5 @@ If you were to complete this assignment again, what would you do differently to:
 - Create more realistic IoT simulations
 - Enhance the user interface experience
 
-## Real-World Connections
-
-How does this lab connect to real IoT and smart home systems:
-
-- **Device management:** How do real smart homes track device status?
-- **User interfaces:** How do commercial IoT systems handle user commands?
-- **System monitoring:** How do real systems provide status feedback?
 
 

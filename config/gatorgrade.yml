@@ -1,7 +1,7 @@
 - description: Have at least a minimum number (at least 8) of commits in repository
   check: CountCommits
   options:
-    count: 2
+    count: 4
 - src/main.py:
     - description: Check file exists
       check: ConfirmFileExists
@@ -75,7 +75,7 @@
       check: MatchFileFragment
       options:
         fragment: .value()
-        count: 4
+        count: 2
         exact: false
     - description: Use button pull-up resistor Pin.PULL_UP (at least 1 time)
       check: MatchFileFragment
@@ -105,7 +105,7 @@
       check: MatchFileFragment
       options:
         fragment: 'for '
-        count: 6
+        count: 5
         exact: false
     - description: Use range with len for list iteration range(len( (at least 3 times)
       check: MatchFileFragment
@@ -117,7 +117,7 @@
       check: MatchFileFragment
       options:
         fragment: 'if '
-        count: 10
+        count: 6
         exact: false
     - description: Use while loops for main control and button input (at least 3 times)
       check: MatchFileFragment
@@ -143,12 +143,6 @@
         fragment: sys.exit()
         count: 1
         exact: false
-    - description: Use device status checking with string contains (at least 3 times)
-      check: MatchFileFragment
-      options:
-        fragment: '"'
-        count: 15
-        exact: false
     - description: Create main control loop with operation counter (at least 1 time)
       check: MatchFileFragment
       options:
@@ -159,6 +153,18 @@
       check: MatchFileFragment
       options:
         fragment: choice
+        count: 3
+        exact: false
+    - description: Use elif statements for menu choices (at least 2 times)
+      check: MatchFileFragment
+      options:
+        fragment: elif
+        count: 2
+        exact: false
+    - description: Use else statements for control flow (at least 3 times)
+      check: MatchFileFragment
+      options:
+        fragment: 'else:'
         count: 3
         exact: false
 
