@@ -126,9 +126,7 @@ def main():
                 print("Press button to confirm...")
                 while button.value() == 1:  # Wait for button press
                     time.sleep(0.1)
-                time.sleep(0.3)  # Debounce delay
-                while button.value() == 0:  # Wait for button release
-                    time.sleep(0.1)
+                time.sleep(0.2)  # Prevent button bounce
                 print("Button pressed - command confirmed!")
 
             # TODO: Add device to the list and print confirmation message

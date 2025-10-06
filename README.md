@@ -130,32 +130,15 @@ active_devices.remove("thermostat")  # Turn off thermostat
 # active_devices becomes ["security_camera", "front_door_lock"]
 ```
 
-#### LED Status Logic
-**Smart indicators** based on device types (customize for your chosen systems):
-```python
-# Example: System LED 1 (Security) - ON if security devices are active
-system1_active = False
-for device in active_devices:
-    if "lock" in device or "camera" in device or "security" in device:
-        system1_active = True
-        break
-
-if system1_active:
-    led_system1.on()  # Use your chosen LED variable name
-else:
-    led_system1.off()
-```
-
 ### Button Integration for IoT Commands
 
 Your program uses **button confirmation** for device commands:
 ```python
-print("Press button to execute command...")
+print("Press button to confirm...")
 while button.value() == 1:  # Wait for button press
-    time.sleep(0.1)
-time.sleep(0.3)  # Debounce delay
-while button.value() == 0:  # Wait for button release
-    time.sleep(0.1)
+  time.sleep(0.1)
+time.sleep(0.2)  # Prevent button bounce
+print("Button pressed - command confirmed!")
 ```
 
 ## Required Features for Complete Implementation
